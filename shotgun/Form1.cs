@@ -106,6 +106,10 @@ namespace shotgun
             if (playerAction == "load")
             {
                 playerAmmo++;
+                if (playerAmmo == 3)
+                {
+                    PlayerHasShotgun();
+                }
                 UpdatePlayerAmmoLabel();
                 switch (computerAction)
                 {
@@ -153,9 +157,9 @@ namespace shotgun
             switch (result)
             {
                 case "draw": break;
-                case "player win": MessageBox.Show("The player wins!"); System.Windows.Forms.Application.Exit(); break;
-                case "computer win": MessageBox.Show("The computer wins!"); System.Windows.Forms.Application.Exit(); break;
-                case "both lose": MessageBox.Show("It's a draw!"); System.Windows.Forms.Application.Exit(); break;
+                case "player win": MessageBox.Show("The player wins!"); TryAgain(); break;
+                case "computer win": MessageBox.Show("The computer wins!"); TryAgain(); break;
+                case "both lose": MessageBox.Show("It's a draw!"); TryAgain(); break;
                 default: MessageBox.Show("Whoops, something went wrong..."); break;
             }
         }
@@ -177,6 +181,21 @@ namespace shotgun
         {
             InitializeComponent();
             lblEventLog.Text = "[Event log]\nThe duelists ready themselves...";
+        }
+
+        private void TryAgain()
+        {
+            var result = MessageBox.Show("Play again?", "Shotgun!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                frmShotgun NewForm = new frmShotgun();
+                NewForm.Show();
+                this.Dispose(false);
+            }
+            else
+            {
+                System.Windows.Forms.Application.Exit();
+            }
         }
 
         private void btnLoad_Click(object sender, EventArgs e)
