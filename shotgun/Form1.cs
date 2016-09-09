@@ -160,7 +160,6 @@ namespace shotgun
                 case "player win": MessageBox.Show("The player wins!"); TryAgain(); break;
                 case "computer win": MessageBox.Show("The computer wins!"); TryAgain(); break;
                 case "both lose": MessageBox.Show("It's a draw!"); TryAgain(); break;
-                default: MessageBox.Show("Whoops, something went wrong..."); break;
             }
         }
 
@@ -201,11 +200,6 @@ namespace shotgun
         private void btnLoad_Click(object sender, EventArgs e)
         {
             btnFire.Enabled = true;
-
-            if (playerAmmo == 3)
-            {
-                PlayerHasShotgun();
-            }
 
             SimulateResult("load", ComputerTurn());
         }
