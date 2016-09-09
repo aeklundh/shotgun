@@ -37,6 +37,7 @@
             this.lblPlayerAmmo = new System.Windows.Forms.Label();
             this.lblEventLog = new System.Windows.Forms.Label();
             this.btnShotgun = new System.Windows.Forms.Button();
+            this.lblHeader = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnLoad
@@ -73,7 +74,7 @@
             // lblPlayerAmmoCount
             // 
             this.lblPlayerAmmoCount.AutoSize = true;
-            this.lblPlayerAmmoCount.Location = new System.Drawing.Point(248, 214);
+            this.lblPlayerAmmoCount.Location = new System.Drawing.Point(241, 164);
             this.lblPlayerAmmoCount.Name = "lblPlayerAmmoCount";
             this.lblPlayerAmmoCount.Size = new System.Drawing.Size(24, 13);
             this.lblPlayerAmmoCount.TabIndex = 3;
@@ -82,7 +83,7 @@
             // lblComputerAmmoCount
             // 
             this.lblComputerAmmoCount.AutoSize = true;
-            this.lblComputerAmmoCount.Location = new System.Drawing.Point(248, 239);
+            this.lblComputerAmmoCount.Location = new System.Drawing.Point(241, 177);
             this.lblComputerAmmoCount.Name = "lblComputerAmmoCount";
             this.lblComputerAmmoCount.Size = new System.Drawing.Size(24, 13);
             this.lblComputerAmmoCount.TabIndex = 4;
@@ -91,7 +92,7 @@
             // lblComputerAmmo
             // 
             this.lblComputerAmmo.AutoSize = true;
-            this.lblComputerAmmo.Location = new System.Drawing.Point(129, 239);
+            this.lblComputerAmmo.Location = new System.Drawing.Point(124, 177);
             this.lblComputerAmmo.Name = "lblComputerAmmo";
             this.lblComputerAmmo.Size = new System.Drawing.Size(111, 13);
             this.lblComputerAmmo.TabIndex = 5;
@@ -100,7 +101,7 @@
             // lblPlayerAmmo
             // 
             this.lblPlayerAmmo.AutoSize = true;
-            this.lblPlayerAmmo.Location = new System.Drawing.Point(129, 214);
+            this.lblPlayerAmmo.Location = new System.Drawing.Point(140, 164);
             this.lblPlayerAmmo.Name = "lblPlayerAmmo";
             this.lblPlayerAmmo.Size = new System.Drawing.Size(95, 13);
             this.lblPlayerAmmo.TabIndex = 6;
@@ -109,7 +110,7 @@
             // lblEventLog
             // 
             this.lblEventLog.AutoSize = true;
-            this.lblEventLog.Location = new System.Drawing.Point(210, 31);
+            this.lblEventLog.Location = new System.Drawing.Point(25, 125);
             this.lblEventLog.Name = "lblEventLog";
             this.lblEventLog.Size = new System.Drawing.Size(52, 13);
             this.lblEventLog.TabIndex = 7;
@@ -126,11 +127,23 @@
             this.btnShotgun.UseVisualStyleBackColor = true;
             this.btnShotgun.Click += new System.EventHandler(this.btnShotgun_Click);
             // 
+            // lblHeader
+            // 
+            this.lblHeader.AutoSize = true;
+            this.lblHeader.Font = new System.Drawing.Font("Gigi", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHeader.Location = new System.Drawing.Point(79, 22);
+            this.lblHeader.Name = "lblHeader";
+            this.lblHeader.Size = new System.Drawing.Size(133, 44);
+            this.lblHeader.TabIndex = 9;
+            this.lblHeader.Text = "Shotgun!";
+            // 
             // frmShotgun
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(284, 204);
+            this.Controls.Add(this.lblHeader);
             this.Controls.Add(this.btnShotgun);
             this.Controls.Add(this.lblEventLog);
             this.Controls.Add(this.lblPlayerAmmo);
@@ -158,6 +171,7 @@
         private System.Windows.Forms.Label lblPlayerAmmo;
         private System.Windows.Forms.Label lblEventLog;
         private System.Windows.Forms.Button btnShotgun;
+        private System.Windows.Forms.Label lblHeader;
     }
 }
 
